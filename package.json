@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "wct --configFile local.wct.conf.json"
+    "test": "wct --configFile local.wct.conf.json",
+    "serve": "polyserve"
   },
   "repository": {
     "type": "git",
