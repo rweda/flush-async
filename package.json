@@ -1,0 +1,22 @@
+{
+  "name": "@rweda/flush-async",
+  "version": "0.0.0",
+  "description": "Promisified 'flush()' for WCT",
+  "main": "flush-async.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "wct --configFile local.wct.conf.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rweda/flush-async.git"
+  },
+  "author": "Redwood EDA (http://redwoodeda.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rweda/flush-async/issues"
+  },
+  "homepage": "https://github.com/rweda/flush-async#readme"
+}

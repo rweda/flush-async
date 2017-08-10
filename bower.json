@@ -1,0 +1,18 @@
+{
+  "name": "flush-async",
+  "description": "Promisified 'flush()' for WCT",
+  "main": "flush-async.js",
+  "authors": [
+    "Redwood EDA (http://redwoodeda.com)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rweda/flush-async",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
