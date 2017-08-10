@@ -1,5 +1,7 @@
 # Flush Async
 
+[![Build Status](https://travis-ci.org/rweda/flush-async.svg?branch=master)](https://travis-ci.org/rweda/flush-async)
+
 Promisified `flush()` for `web-component-tester`.
 
 Example:
