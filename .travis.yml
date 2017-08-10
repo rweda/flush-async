@@ -9,8 +9,5 @@ addons:
     packages:
       - google-chrome-stable
 
-before_script:
-  - npm install
-
 script:
-  - npm test
+  - xvfb-run npm test
