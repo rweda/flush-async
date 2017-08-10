@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="/components/webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="/components/web-component-tester/browser.js"></script>
+    <link rel="import" href="/components/polymer/polymer.html">
+    <link rel="import" href="/components/flush-async/flush-async.html">
+  </head>
+  <body>
+    <dom-module id="my-list">
+      <template>
+        <ul>
+          <template is="dom-repeat" items="{{items}}">
+            <li>[[item]]</li>
+          </template>
+        </ul>
+      </template>
+      <script>
+        window.addEventListener("WebComponentsReady", () => {
+          Polymer({
+            is: "my-list",
+            properties: {
+              items: {
+                type: Array,
+              },
+            },
+          });
+        });
+      </script>
+    </dom-module>
+    
+    <test-fixture id="empty-list">
+      <template>
+        <my-list items="[]"></my-list>
+      </template>
+    </test-fixture>
+    
+    <script>
+      chai.should();
+      
+      window.addEventListener("WebComponentsReady", () => {
+        
+        let list;
+        
+        beforeEach(() => {
+          list = fixture("empty-list");
+        });
+        
+        it("starts with no items in the list", (done) => {
+          flush(() => {
+            list.querySelectorAll("li").length.should.equal(0);
+            done();
+          });
+        });
+        
+        it("doesn't create 'li' elements immediately", () => {
+          list.push("items", "Hello World");
+          list.querySelectorAll("li").length.should.equal(0);
+        });
+        
+        it("counts 'li' elements after 'flush()' callback", (done) => {
+          list.push("items", "Hello World");
+          flush(() => {
+            list.querySelectorAll("li").length.should.equal(0);
+            done();
+          });
+        });
+        
+        it("counts 'li' elements after 'flushAsync()' resolves", () => {
+          list.push("items", "Hello World");
+          return flushAsync()
+            .then(() => list.querySelectorAll("li").length.should.equal(0));
+        });
+      
+      });
+    </script>
+  </body>
+</html>
