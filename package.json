@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/rweda/flush-async/issues"
   },
-  "homepage": "https://github.com/rweda/flush-async#readme"
+  "homepage": "https://github.com/rweda/flush-async#readme",
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "polyserve": "^0.20.0",
+    "web-component-tester": "^6.0.1"
+  }
 }

@@ -14,5 +14,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "web-component-tester": "^6.0.1",
+    "webcomponentsjs": "^1.0.7",
+    "polymer": "^2.0.2"
+  }
 }
