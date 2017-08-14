@@ -28,3 +28,9 @@ Example:
   </body>
 </html>
 ```
+
+## Installation
+
+```sh
+bower install --save-dev rweda/flush-async
+```
